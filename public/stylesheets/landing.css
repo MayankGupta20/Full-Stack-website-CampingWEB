@@ -1,0 +1,31 @@
+body{
+	text-align: center;
+	padding:40vh;
+	background-color:black;
+
+	
+}
+
+#landing_head{
+	color: white;
+	z-index: 1;
+	position: relative;
+}
+
+#showCampBtn{
+	z-index: 1;
+	position: relative;
+	height: 50px;
+    font-size: 25px;
+
+}
+
+img{
+	height: 100%;
+	width:100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	position: fixed;
+	opacity: 0.7;
+}

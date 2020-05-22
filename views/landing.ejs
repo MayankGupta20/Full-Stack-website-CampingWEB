@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YelpCamp</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/landing.css">
+</head>
+<body>
+
+	<div >
+		<h1 id="landing_head">Welcome to YelpCamp!</h1>
+
+		<a id="showCampBtn" class="btn btn-btn-lg btn-success" href="/campgrounds">View All Campgrounds</a>
+	</div>
+	<ul id="slideshow">
+		<li><img id="image"></li>
+	</ul>
+	<script type="text/javascript">
+		
+		var img = document.getElementById("image");
+
+		var images = ["https://images.unsplash.com/photo-1515444744559-7be63e1600de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+			"https://images.unsplash.com/photo-1525811902-f2342640856e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+			"https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+			"https://images.unsplash.com/photo-1496545672447-f699b503d270?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+			"https://images.unsplash.com/photo-1524494860062-9442631ee30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+			];
+
+		images.forEach(function(image,index){
+			setTimeout(function(){
+				img.src=image;
+			},index*2000);
+		})
+		
+
+	</script>
+
+</body>
+</html>
+
+

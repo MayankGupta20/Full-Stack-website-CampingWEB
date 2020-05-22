@@ -1,0 +1,15 @@
+<h3> Campground </h3>
+
+<h4><%=camp.name%></h4>
+
+<img src="<%=camp.image%>">
+
+<p><%=camp.description%></p>
+
+<% camp.comments.forEach(function(cmt){ %>
+	<p><STRONG><%=cmt.author%></STRONG> : <%=cmt.text%> </p>
+<% })%>
+
+
+
+
