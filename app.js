@@ -14,6 +14,8 @@ var campgroundRoute = require("./routes/campgroundRoute");
 var commentRoute = require("./routes/commentRoute");
 var indexRoute = require("./routes/indexRoute");
 
+var port = process.env.PORT || 3000;
+
 //mongolab link to connect
 //mongodb+srv://mayank1:<password>@cluster0-nnjxu.mongodb.net/test?retryWrites=true&w=majority
 
@@ -91,6 +93,6 @@ app.use("/campgrounds",campgroundRoute);
 app.use("/campgrounds/:id/comments",commentRoute);
 app.use(indexRoute);
 
-app.listen("3000",function(){
+app.listen(port,function(){
 	console.log("Server running ");
 });
