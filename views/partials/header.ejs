@@ -6,10 +6,14 @@
   <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
     	<a class="navbar-brand" href="/">YelpCamp</a>
-  		  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="nav navbar-nav ml-auto">
+      <button  class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+      </button>
+  		  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+          
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
     <% if(!currentUser){ %>
        <li class="nav-item">
         <a class="nav-link" href="/login">Login</a>
@@ -31,6 +35,11 @@
     </ul>
   </div>
 	</nav>
+
+
+
+
+
   <div class="container">
     <!-- only error means empty array -->
     <% if(error && error.length>0){ %>

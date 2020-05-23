@@ -15,6 +15,7 @@ var commentRoute = require("./routes/commentRoute");
 var indexRoute = require("./routes/indexRoute");
 
 var port = process.env.PORT || 3000;
+var url = process.env.DATABASEURL || "mongodb://localhost/YelpCamp";
 
 //mongolab link to connect
 //mongodb+srv://mayank1:<password>@cluster0-nnjxu.mongodb.net/test?retryWrites=true&w=majority
@@ -27,8 +28,8 @@ var flash = require("connect-flash");
 
 //mongoose.connect('mongodb://localhost/YelpCamp' , {useNewUrlParser: true});
 //mongoose.connect('mongodb+srv://mayank1:mayank123@cluster0-nnjxu.mongodb.net/test?retryWrites=true&w=majority' , {useNewUrlParser: true});
-mongoose.connect('mongodb+srv://mayankGupta:may123ank@first-nnjxu.mongodb.net/test?retryWrites=true&w=majority' , {useNewUrlParser: true});
-
+//mongoose.connect('mongodb+srv://mayankGupta:may123ank@first-nnjxu.mongodb.net/test?retryWrites=true&w=majority' , {useNewUrlParser: true});
+mongoose.connect(url,{urlNewUrlParser:true});
 
 /*campground.create({
 	name:"night out",
